@@ -17,6 +17,9 @@ public class Snake {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
+    @Column(name = "owner")
+    private String owner;
+
     @Column(name = "name")
     private String name;
 

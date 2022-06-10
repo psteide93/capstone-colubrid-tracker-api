@@ -27,6 +27,7 @@ public class SnakeService {
 
         if (foundSnake.isPresent()) {
             Snake updatedSnake = foundSnake.get();
+            updatedSnake.setOwner(snake.getOwner());
             updatedSnake.setName(snake.getName());
             updatedSnake.setBreederId(snake.getBreederId());
             updatedSnake.setImgUrl(snake.getImgUrl());

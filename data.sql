@@ -3,6 +3,7 @@ TRUNCATE snakes;
 INSERT INTO
     snakes(
         id,
+        owner,
         name,
         breeder_id,
         img_url,
@@ -13,6 +14,7 @@ INSERT INTO
 VALUES
     (
         1000,
+        'psteide@ford.com',
         'Bean',
         'AA-19-01',
         'https://i.imgur.com/WDiM4AX.jpg',
@@ -22,6 +24,7 @@ VALUES
     ),
     (
         1001,
+        'psteide@ford.com',
         'Sprout',
         'AA-20-01',
         'https://i.imgur.com/Y8xh29a.jpg',
@@ -31,6 +34,7 @@ VALUES
     ),
     (
         1002,
+        'psteide@ford.com',
         'Ozymandias',
         'AA-20-02',
         'https://i.imgur.com/ijzzJ8z.jpg',
@@ -42,6 +46,7 @@ VALUES
 INSERT INTO
     snakes(
         id,
+        owner,
         name,
         breeder_id,
         img_url,
@@ -51,6 +56,7 @@ INSERT INTO
 VALUES
     (
         1003,
+        'psteide@ford.com',
         'Talula',
         'BO-22-01',
         'https://i.imgur.com/99a3lLX.jpg',
@@ -59,16 +65,18 @@ VALUES
     ),
     (
         1004,
+        'psteide@ford.com',
         'No Feet',
         'BO-22-02',
         'https://i.imgur.com/bUjQP7M.jpg',
         'Unknown',
-        'Werid pattern. Parents were possibilty het for Motley?'
+        'Werid pattern. Parents are possibilty het for Motley?'
     ),
     (
         1005,
+        'psteide@ford.com',
         'Kaa',
-        'BO-22-02',
+        'BO-22-03',
         'https://i.imgur.com/Ui5puwe.jpg',
         'Unknown',
         'Baby hatched out as snow, proves parents are definately het for Anery'
