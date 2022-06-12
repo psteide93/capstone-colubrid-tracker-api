@@ -1,4 +1,8 @@
-TRUNCATE snakes;
+TRUNCATE snakes,
+feedings,
+sheds,
+weights,
+notes;
 
 INSERT INTO
     snakes(
@@ -80,4 +84,55 @@ VALUES
         'https://i.imgur.com/Ui5puwe.jpg',
         'Unknown',
         'Baby hatched out as snow, proves parents are definately het for Anery'
+    );
+
+INSERT INTO
+    feedings(
+        id,
+        date,
+        item,
+        snake_id
+    )
+VALUES
+    (2000, '05/24/2022', 'Adult', 1000),
+    (2001, '06/01/2022', 'Adult', 1000),
+    (2002, '06/12/2022', 'Adult', 1000);
+
+INSERT INTO
+    sheds(
+        id,
+        date,
+        observation,
+        snake_id
+    )
+VALUES
+    (3000, '05/24/2022', 'Noticed', 1000),
+    (3001, '06/01/2022', 'Shed', 1000),
+    (3002, '06/12/2022', 'Shed', 1000);
+
+INSERT INTO
+    weights(
+        id,
+        date,
+        weight,
+        snake_id
+    )
+VALUES
+    (4000, '05/24/2022', 500, 1000),
+    (4001, '06/01/2022', 513, 1000),
+    (4002, '06/12/2022', 535, 1000);
+
+INSERT INTO
+    notes(
+        id,
+        date,
+        note,
+        snake_id
+    )
+VALUES
+    (
+        5000,
+        '06/12/2022',
+        'Just laid her second clutch of eggs, 13 eggs total, but only 3 fertile. Currently in her post-lay shed',
+        1000
     );
