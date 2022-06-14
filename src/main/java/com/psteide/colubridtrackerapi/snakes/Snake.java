@@ -15,6 +15,7 @@ import com.psteide.colubridtrackerapi.weights.Weight;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 
 import lombok.Data;
@@ -48,7 +49,7 @@ public class Snake {
     @Column(name = "last_note")
     private String lastNote;
 
-    @OneToMany(mappedBy = "snake")
+    @OneToMany(mappedBy = "snake", cascade = CascadeType.ALL)
     private List<Feeding> feedings;
 
     @OneToMany(mappedBy = "snake")

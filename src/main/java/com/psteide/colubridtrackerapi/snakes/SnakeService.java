@@ -34,6 +34,7 @@ public class SnakeService {
             updatedSnake.setGender(snake.getGender());
             updatedSnake.setLastMeal(snake.getLastMeal());
             updatedSnake.setLastNote(snake.getLastNote());
+            updatedSnake.setFeedings(snake.getFeedings());
 
             snakeRepository.save(updatedSnake);
             return Optional.of(updatedSnake);

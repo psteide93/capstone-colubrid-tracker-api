@@ -33,4 +33,7 @@ public class Shed {
     @JoinColumn(name = "snake_id")
     @JsonIgnore
     private Snake snake;
+
+    @Column(name = "snake_link")
+    private String snakeLink;
 }

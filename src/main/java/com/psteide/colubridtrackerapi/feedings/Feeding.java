@@ -11,6 +11,7 @@ import com.psteide.colubridtrackerapi.snakes.Snake;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 
 import lombok.Data;
@@ -29,8 +30,12 @@ public class Feeding {
     @Column(name = "item")
     private String item;
 
-    @ManyToOne
-    @JoinColumn(name = "snake_id")
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "snake_id", referencedColumnName = "id")
     @JsonIgnore
     private Snake snake;
+
+    @Column(name = "snake_link")
+    private String snakeLink;
+
 }
