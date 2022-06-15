@@ -49,17 +49,6 @@ public class FeedingController {
         return createHashSingular(createdFeeding);
     }
 
-    // @PostMapping("/{feedingId}/snakes/{snakeId}")
-    // @ResponseStatus(HttpStatus.CREATED)
-    // Feeding assignSnaketoFeeding(
-    // @PathVariable long feedingId,
-    // @PathVariable long snakeId) {
-    // Feeding feeding = feedingService.findById(feedingId).get();
-    // Snake snake = snakeService.findById(snakeId).get();
-    // feeding.assignSnake(snake);
-    // return feedingService.create(feeding);
-    // }
-
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.CREATED)
     public Map<String, Feeding> update(@RequestBody Feeding feeding, @PathVariable Long id) {

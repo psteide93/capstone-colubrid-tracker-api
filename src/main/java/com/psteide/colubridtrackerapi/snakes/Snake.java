@@ -6,16 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Table;
 
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 
-import com.psteide.colubridtrackerapi.feedings.Feeding;
-import com.psteide.colubridtrackerapi.notes.Note;
-import com.psteide.colubridtrackerapi.sheds.Shed;
-import com.psteide.colubridtrackerapi.weights.Weight;
-
-import java.util.List;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 
 import lombok.Data;
@@ -42,23 +33,5 @@ public class Snake {
 
     @Column(name = "gender")
     private String gender;
-
-    @Column(name = "last_meal")
-    private String lastMeal;
-
-    @Column(name = "last_note")
-    private String lastNote;
-
-    @OneToMany(mappedBy = "snake", cascade = CascadeType.ALL)
-    private List<Feeding> feedings;
-
-    @OneToMany(mappedBy = "snake")
-    private List<Shed> sheds;
-
-    @OneToMany(mappedBy = "snake")
-    private List<Weight> weights;
-
-    @OneToMany(mappedBy = "snake")
-    private List<Note> notes;
 
 }

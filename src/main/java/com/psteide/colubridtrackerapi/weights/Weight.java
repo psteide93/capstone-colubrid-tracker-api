@@ -5,12 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.psteide.colubridtrackerapi.snakes.Snake;
-
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Column;
 
 import lombok.Data;
@@ -28,11 +23,6 @@ public class Weight {
 
     @Column(name = "weight")
     private int weight;
-
-    @ManyToOne
-    @JoinColumn(name = "snake_id")
-    @JsonIgnore
-    private Snake snake;
 
     @Column(name = "snake_link")
     private String snakeLink;

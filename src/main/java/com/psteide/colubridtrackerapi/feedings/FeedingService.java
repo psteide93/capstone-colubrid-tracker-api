@@ -29,7 +29,6 @@ public class FeedingService {
             Feeding updatedFeeding = foundFeeding.get();
             updatedFeeding.setDate(feeding.getDate());
             updatedFeeding.setItem(feeding.getItem());
-            updatedFeeding.setSnake(feeding.getSnake());
 
             feedingRepository.save(updatedFeeding);
             return Optional.of(updatedFeeding);
